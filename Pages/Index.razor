@@ -1,9 +1,35 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+@* Main layout for the home page *@
+<div class="container">
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Empowering Your Business with Technology</h1>
+            <p>Your partner in digital transformation and IT solutions.</p>
+            <a class="btn btn-primary" href="#">Learn More</a>
+        </div>
+    </header>
+    
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <h3>Consulting</h3>
+                <p>Expert advice to help you navigate complex IT challenges.</p>
+                <a href="#" class="btn btn-secondary">Discover More</a>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <h3>Development</h3>
+                <p>Custom software solutions tailored to your business needs.</p>
+                <a href="#" class="btn btn-secondary">Discover More</a>
+            </div>
+            <!-- Add more service cards as needed -->
+        </div>
+    </section>
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <footer>
+        <p>&copy; 2024 MyBlazorApp. All rights reserved.</p>
+    </footer>
+</div>
