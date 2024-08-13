@@ -2,9 +2,25 @@
 
 @* Main layout for the home page *@
 <div class="container">
+    <header class="navbar">
+        <div class="navbar-content">
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Logo" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
     <header class="hero-section">
         <div class="hero-content">
-            <h1>Empowering Your Business with Technology</h1>
+            <h1>Safety Management Excellence</h1>
             <p>Your partner in digital transformation and IT solutions.</p>
             <a class="btn btn-primary" href="#">Learn More</a>
         </div>
@@ -14,22 +30,26 @@
         <h2>Our Services</h2>
         <div class="service-cards">
             <!-- Service Card 1 -->
-            <div class="service-card">
-                <h3>Consulting</h3>
-                <p>Expert advice to help you navigate complex IT challenges.</p>
-                <a href="#" class="btn btn-secondary">Discover More</a>
+            <div class="service-card service-card-1">
+                <div class="overlay">
+                    <h3>Consulting</h3>
+                    <p>Expert advice to help you navigate complex IT challenges.</p>
+                    <a href="#" class="btn btn-secondary">Discover More</a>
+                </div>
             </div>
             <!-- Service Card 2 -->
-            <div class="service-card">
-                <h3>Development</h3>
-                <p>Custom software solutions tailored to your business needs.</p>
-                <a href="#" class="btn btn-secondary">Discover More</a>
+            <div class="service-card service-card-2">
+                <div class="overlay">
+                    <h3>Development</h3>
+                    <p>Custom software solutions tailored to your business needs.</p>
+                    <a href="#" class="btn btn-secondary">Discover More</a>
+                </div>
             </div>
             <!-- Add more service cards as needed -->
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 MyBlazorApp. All rights reserved.</p>
+        <p>&copy; 2024 DTI Solutions. All rights reserved.</p>
     </footer>
 </div>

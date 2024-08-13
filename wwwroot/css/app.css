@@ -1,40 +1,104 @@
-﻿/* Index Page Styles */
+﻿/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #003c71; /* Adjust color as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .navbar-brand img {
+  height: 50px; /* Adjust height */
+}
+
+.navbar .navbar-menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-menu ul li {
+  margin: 0 15px;
+}
+
+.navbar .navbar-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar .navbar-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
 .hero-section {
   background: url("/images/hero1.jpeg") no-repeat center center;
   background-size: cover;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  position: relative;
+  margin-top: 70px; /* Offset navbar height */
 }
 
 .hero-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
 .hero-content .btn-primary {
-  background-color: #0071c1;
-  border-color: #005a9e;
-  padding: 15px 30px;
-  font-size: 1rem;
+  background-color: #005a9e;
+  border-color: #004a9f;
+  padding: 15px 40px;
+  font-size: 1.25rem;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .hero-content .btn-primary:hover {
-  background-color: #005a9e;
-  border-color: #004a9f;
+  background-color: #004a9f;
+  border-color: #003c71;
 }
 
+/* Services Section */
 .services {
   padding: 60px 20px;
   background-color: #f4f4f4;
@@ -42,7 +106,7 @@
 }
 
 .services h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 40px;
 }
 
@@ -61,10 +125,27 @@
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
+}
+
+.service-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service-card-1 {
+  background: url("/images/serviceIcon.jpeg") no-repeat center center;
+  background-size: contain;
+}
+
+.service-card-2 {
+  background: url("/images/serviceIcon2.jpeg") no-repeat center center;
+  background-size: contain;
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   margin-bottom: 10px;
 }
 
@@ -79,6 +160,7 @@
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .service-card .btn-secondary:hover {
@@ -86,33 +168,37 @@
   border-color: #003c71;
 }
 
+/* Footer */
 footer {
   background-color: #003c71;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 40px 20px;
+  position: relative;
+  margin-top: 60px; /* Offset footer from content */
 }
 
-/* Backgrounds for Additional Sections */
-.background-section {
-  background: url("/images/background1.jpeg") no-repeat center center;
-  background-size: cover;
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.background-section-alt {
-  background: url("/images/background2.jpeg") no-repeat center center;
-  background-size: cover;
+footer .footer-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.service-icon {
-  background: url("/images/serviceIcon.jpeg") no-repeat center center;
-  background-size: cover;
+footer .footer-content p {
+  font-size: 1rem;
 }
 
-.service-icon-alt {
-  background: url("/images/serviceIcon2.jpeg") no-repeat center center;
-  background-size: cover;
+footer .footer-content .social-links {
+  margin-top: 20px;
+}
+
+footer .footer-content .social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.25rem;
 }
