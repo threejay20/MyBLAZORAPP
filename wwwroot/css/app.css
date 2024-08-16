@@ -20,17 +20,30 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: #003c71; /* Navbar background color */
+  width: 100%; /* Full width of the page */
+  background-color: #003366; /* Navbar background color */
+  padding: 10px 0; /* Padding on top and bottom */
+  position: fixed; /* Make the navbar stay on top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+/* Logo styling */
+.navbar-brand img {
+  height: 60px; /* Adjust the height of the logo */
+  display: block;
+  margin: 0; /* Ensure no extra margin */
+}
+
+/* Align content to take full width */
+.navbar .container {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure this is high enough to stay on top */
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow under the navbar */
+  padding: 0 20px;
+  margin: 0;
 }
 
 /* Navbar Brand (Logo) */
@@ -54,26 +67,29 @@ body {
   justify-content: flex-end; /* Aligns the menu items to the right */
 }
 
+/* Navbar menu styling */
 .navbar-menu ul {
-  display: flex;
   list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
 .navbar-menu li {
-  margin-left: 20px; /* Space between menu items */
+  margin-left: 20px; /* Space out the menu items */
 }
 
 .navbar-menu a {
-  color: #ffffff; /* Text color */
   text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 16px;
   font-weight: bold;
-  padding: 10px;
+  transition: color 0.3s;
 }
 
+/* Hover effect for the menu links */
 .navbar-menu a:hover {
-  color: #ffcc00; /* Hover effect color */
+  color: #ffcc00; /* Change text color on hover */
 }
 
 /* Ensure content is pushed down */
@@ -234,4 +250,49 @@ footer .footer-content .social-links a {
 /* Ensure content is pushed down */
 .page {
   margin-top: 60px; /* Adjust this margin based on your navbar height */
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0; /* Adjust spacing for vertical menu items */
+  }
+
+  /* About Us Section */
+  .about-us {
+    padding: 60px 20px;
+    background-color: #e9ecef;
+    text-align: center;
+  }
+
+  .about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #003366; /* Adjust the color as needed */
+  }
+
+  .about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+  }
+
+  .about-us img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 }
