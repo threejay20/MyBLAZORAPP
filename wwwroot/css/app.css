@@ -20,23 +20,21 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  width: 100%; /* Full width of the page */
-  background-color: #003366; /* Navbar background color */
-  padding: 10px 0; /* Padding on top and bottom */
-  position: fixed; /* Make the navbar stay on top */
+  width: 100%;
+  background-color: #003366;
+  padding: 10px 0;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Ensure it is on top of other elements */
+  z-index: 1000;
 }
 
-/* Logo styling */
 .navbar-brand img {
-  height: 60px; /* Adjust the height of the logo */
+  height: 60px;
   display: block;
-  margin: 0; /* Ensure no extra margin */
+  margin: 0;
 }
 
-/* Align content to take full width */
 .navbar .container {
   max-width: 100%;
   display: flex;
@@ -46,28 +44,12 @@ body {
   margin: 0;
 }
 
-/* Navbar Brand (Logo) */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  margin-left: 0; /* Remove any left margin to push the logo to the left edge */
-}
-
-.navbar-brand img {
-  max-height: 70px; /* Increase the max height to make the logo taller */
-  max-width: 150px; /* Adjust the max width if needed to maintain aspect ratio */
-  height: auto; /* Ensure the height adjusts automatically */
-  width: auto; /* Ensure the width adjusts automatically */
-}
-
-/* Navbar Menu */
 .navbar-menu {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-end; /* Aligns the menu items to the right */
+  justify-content: flex-end;
 }
 
-/* Navbar menu styling */
 .navbar-menu ul {
   list-style: none;
   display: flex;
@@ -76,26 +58,21 @@ body {
 }
 
 .navbar-menu li {
-  margin-left: 20px; /* Space out the menu items */
+  margin-left: 20px;
 }
 
 .navbar-menu a {
   text-decoration: none;
-  color: #fff; /* White text color */
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-/* Hover effect for the menu links */
 .navbar-menu a:hover {
-  color: #ffcc00; /* Change text color on hover */
+  color: #ffcc00;
 }
 
-/* Ensure content is pushed down */
-.page {
-  margin-top: 60px; /* Adjust this margin based on your navbar height */
-}
 /* Hero Section */
 .hero-section {
   background: url("/images/hero1.jpeg") no-repeat center center;
@@ -103,14 +80,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 120px 20px;
-  margin-top: 60px; /* Adjust this margin to ensure no overlap with the navbar */
-}
-
-.hero-content {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  margin-top: 60px;
 }
 
 .hero-content h1 {
@@ -137,12 +107,30 @@ body {
   border-color: #003c71;
 }
 
+/* About Us Section */
+.about-us {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
 /* Services Section */
 .services {
   padding: 60px 20px;
   background-color: #f4f4f4;
   text-align: center;
 }
+
 .services h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
@@ -163,23 +151,14 @@ body {
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  position: relative;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
 }
 
 .service-card img {
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
-}
-
-.service-card-1 {
-  background: url("/images/serviceIcon.jpeg") no-repeat center center;
-  background-size: contain;
-}
-
-.service-card-2 {
-  background: url("/images/serviceIcon2.jpeg") no-repeat center center;
-  background-size: contain;
 }
 
 .service-card h3 {
@@ -213,17 +192,13 @@ footer {
   text-align: center;
   padding: 40px 20px;
   position: relative;
+  width: 100%; /* Ensure footer takes full width */
   margin-top: 60px; /* Offset footer from content */
 }
 
 footer .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-}
-
-footer .footer-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
 }
 
 footer .footer-content p {
@@ -241,17 +216,6 @@ footer .footer-content .social-links a {
   font-size: 1.25rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Ensure content is pushed down */
-.page {
-  margin-top: 60px; /* Adjust this margin based on your navbar height */
-}
-
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
@@ -264,35 +228,6 @@ footer .footer-content .social-links a {
   }
 
   .navbar-menu li {
-    margin: 10px 0; /* Adjust spacing for vertical menu items */
-  }
-
-  /* About Us Section */
-  .about-us {
-    padding: 60px 20px;
-    background-color: #e9ecef;
-    text-align: center;
-  }
-
-  .about-us h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #003366; /* Adjust the color as needed */
-  }
-
-  .about-us p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
-  }
-
-  .about-us img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
   }
 }
