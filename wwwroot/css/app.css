@@ -91,6 +91,7 @@ body {
 
 /* Hero Section */
 .hero-section {
+  position: relative;
   background: url("/images/hero1.jpeg") no-repeat center center;
   background-size: cover;
   color: #fff;
@@ -99,30 +100,53 @@ body {
   margin-top: 60px;
 }
 
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+}
+
 .hero-content h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow */
   margin-bottom: 20px;
 }
 
 .hero-content p {
+  font-family: "Lato", sans-serif;
   font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow */
   margin-bottom: 30px;
 }
 
 .hero-content .btn-primary {
-  background-color: #005a9e;
-  border-color: #004a9f;
-  padding: 15px 40px;
-  font-size: 1.25rem;
-  text-decoration: none;
-  border-radius: 4px;
+  background-color: #0061a8; /* Blue color */
+  border: 1px solid #004a9f; /* Blue border */
+  color: #fff;
+  padding: 10px 20px; /* Padding to give the button some size */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Bold text */
 }
 
 .hero-content .btn-primary:hover {
   background-color: #004a9f;
   border-color: #003c71;
 }
-
 /* About Us Section */
 .about-us {
   padding: 60px 20px;
@@ -143,7 +167,9 @@ body {
 /* Services Section */
 .services {
   padding: 60px 20px;
-  background-color: #fff;
+  background: url("/images/machine.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
   text-align: center;
 }
 
@@ -159,40 +185,50 @@ body {
 }
 
 .service-card {
-  background: #fff;
+  background: #fff; /* White background */
+  color: #333; /* Dark gray text for better contrast */
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
-  max-width: 300px;
+  padding: 15px;
+  max-width: 250px; /* Reduced max-width */
+  height: 300px; /* Fixed height */
   margin: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
   text-align: center;
   position: relative;
-}
-
-.service-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Hide any content that overflows */
 }
 
 .service-card h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem; /* Reduced font size */
   margin-bottom: 10px;
 }
 
+.service-card .service-title {
+  display: block;
+  font-size: 1.75rem; /* Adjusted font size */
+  font-weight: bold;
+}
+
 .service-card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 0.9rem; /* Reduced font size */
+  margin-bottom: 5px; /* Adjusted margin */
+  flex-grow: 1;
 }
 
 .service-card .btn-secondary {
   background-color: #0061a8;
   border-color: #004a9f;
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
+  margin-top: 0; /* Reduced margin to bring the button closer to the text */
+  align-self: center;
+  font-weight: bold;
 }
 
 .service-card .btn-secondary:hover {
