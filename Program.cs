@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Components.Web;
 using Radzen; 
+using Radzen.Blazor;
 using MyBlazorApp;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);

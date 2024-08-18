@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
 html,
 body {
   font-family: Arial, sans-serif;
@@ -147,6 +151,7 @@ body {
   background-color: #004a9f;
   border-color: #003c71;
 }
+
 /* About Us Section */
 .about-us {
   padding: 60px 20px;
@@ -281,4 +286,12 @@ footer .footer-content .social-links a {
   .navbar-menu li {
     margin: 10px 0;
   }
+}
+
+/* Add Borders for Debugging */
+#hero,
+#about,
+#services,
+#contact {
+  border: 2px solid red; /* Temporary border for debugging */
 }
