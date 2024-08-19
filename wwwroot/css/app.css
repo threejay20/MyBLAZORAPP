@@ -100,7 +100,7 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
   margin-top: 60px;
 }
 
@@ -154,24 +154,33 @@ body {
 
 /* About Us Section */
 .about-us {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
+  background: url("/images/background1.jpeg") no-repeat center;
+  background-size: cover;
+  background-position: center 20%; /* Move the image up 20% from the bottom */
+  padding: 60px 20px 100px;
+  color: #fff;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Lato", sans-serif; /* Use a more readable font */
 }
 
 .about-us h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .about-us p {
   font-size: 1.25rem;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* Services Section */
 .services {
-  padding: 60px 20px;
+  padding: 10px 20px;
   background: url("/images/machine.jpg") no-repeat center center;
   background-size: cover;
   color: #fff;
@@ -246,10 +255,10 @@ footer {
   background-color: #003c71;
   color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 10px 40px;
   position: relative;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 footer .footer-content {
@@ -286,12 +295,4 @@ footer .footer-content .social-links a {
   .navbar-menu li {
     margin: 10px 0;
   }
-}
-
-/* Add Borders for Debugging */
-#hero,
-#about,
-#services,
-#contact {
-  border: 2px solid red; /* Temporary border for debugging */
 }
