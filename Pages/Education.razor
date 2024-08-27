@@ -2,12 +2,246 @@
 @using Radzen
 @using Radzen.Blazor
 
-<h1>Training Education </h1>
+<style>
+    /* Hero Section Styles */
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+        height: 400px; /* Adjust as needed */
+        background: url('/videos/hero-bg.mp4') no-repeat center center;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 20px; /* Remove vertical padding for proper centering */
+    }
+
+    .hero-content h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        color: #ffffff;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-button {
+        background-color: #0061a8;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+    }
+
+    .contact-button:hover {
+        background-color: #004a9f;
+    }
+
+    /* Content Container Styles */
+   .content-container {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    color: #333;
+    max-width: 800px; /* Restrict the width */
+    margin: 0 auto; /* Center the content */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.content-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #003c71; /* Dark blue color for headers */
+}
+
+.content-container p,
+.content-container ul {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify; /* Justified text for a cleaner look */
+    margin-bottom: 20px;
+}
+
+.content-container ul {
+    padding-left: 20px; /* Add some padding to lists */
+}
+
+.content-container li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.link-list a {
+    color: #0061a8;
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Button Styling */
+.contact-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0; /* Center the button */
+    background-color: #0061a8;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+}
+
+.contact-button:hover {
+    background-color: #004a9f;
+}
+
+    .section-header {
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .section-header p {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.125rem;
+    }
+
+    .training-methods, .programs, .contact-info {
+        margin-bottom: 40px;
+    }
+
+    .training-methods ul, .programs ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .training-methods li, .programs li {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.125rem;
+        margin-bottom: 10px;
+    }
+
+    .link-list a {
+        color: #0061a8;
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .link-list a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer and General Styles */
+    footer {
+        background-color: #003c71;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Lato', sans-serif;
+    }
+</style>
+
 <RadzenCard>
-    <CardHeader>
-        <h2>Education</h2>
-    </CardHeader>
     <CardBody>
-        <p>Details about the EDUCATION program...</p>
+        <div class="hero-section">
+            <video autoplay muted loop>
+                <source src="/videos/hero-bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Training & Education</h1>
+                <p>Empower your skills with our comprehensive training programs.</p>
+                <a href="/Contact" class="contact-button">Contact Us Now</a>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div class="section-header">
+                <h2>About Our Training Programs</h2>
+                <p>COSG and our member training providers offer occupational safety training for workers and management in a way that suits your needs. For example, we offer training at a fully equipped training centre, at your workplace, online, or in real-time webinars.</p>
+            </div>
+
+            <div class="training-methods">
+                <h3>Training Methods</h3>
+                <ul>
+                    <li>Online</li>
+                    <li>Instructor-led</li>
+                    <li>Webinar</li>
+                </ul>
+            </div>
+
+            <div class="programs">
+                <h3>Online Learning Programs</h3>
+                <ul class="link-list">
+                    <li><a href="https://example.com/forklift-operator-certification" target="_blank">Forklift Operator Certification</a></li>
+                    <li><a href="https://example.com/whmis-2015-for-workers" target="_blank">WHMIS 2015 for Workers</a></li>
+                    <li><a href="https://example.com/whmis-2015-for-managers" target="_blank">WHMIS 2015 For Managers & Supervisors</a></li>
+                    <li><a href="https://example.com/aoda-customer-service" target="_blank">AODA (customer service)</a></li>
+                    <li><a href="https://example.com/basic-health-safety-awareness" target="_blank">Basic Health and Safety Awareness</a></li>
+                    <li><a href="https://example.com/fall-protection" target="_blank">Fall Protection</a></li>
+                </ul>
+
+                <h3>Instructor-led Training Programs</h3>
+                <ul>
+                    <li>Forklift Operator Certification</li>
+                    <li>Industrial Overhead Crane Operator Certification</li>
+                    <li>Aerial Lift Platform and Fall Protection Certification</li>
+                    <li>WHMIS 2015 for Workers</li>
+                    <li>Confined Space Awareness</li>
+                    <li>Lockout and Tagout</li>
+                    <li>Transportation of Dangerous Goods (TDG ground)</li>
+                    <li>Workplace Violence and Harassment</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Custom Training Solutions</h3>
+                <p>COSG will develop a training webinar to address your specific needs.</p>
+                <a href="/Contact" class="contact-button">Contact Us Now</a>
+            </div>
+        </div>
     </CardBody>
 </RadzenCard>

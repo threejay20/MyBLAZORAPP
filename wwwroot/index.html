@@ -1,36 +1,40 @@
-<!-- 
-  This HTML document sets up the basic structure and resources for a Blazor WebAssembly application. It includes metadata, external and custom stylesheets, Google Fonts, and the necessary script to load the Blazor app, with a focus on ensuring responsiveness and providing a fallback UI for error handling.
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DTI Solutions</title>
     <base href="/" />
+
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
     <link href="css/app.css" rel="stylesheet" />
-    <link href="MyBlazorApp.styles.css" rel="stylesheet" />
+
+    <!-- Additional Custom Styles (if needed) -->
+    <link href="css/custom-styles.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Radzen Blazor Components CSS -->
     <link
       href="https://cdn.radzen.com/blazor/v3.0.0/styles.css"
       rel="stylesheet"
     />
+
+    <!-- Additional Fallback CSS (if needed) -->
+    <link href="css/fallback-styles.css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="app">Loading...</div>
 
-    <div id="blazor-error-ui">
-      <a href="" class="reload">Reload</a>
-      <a class="dismiss">🗙</a>
-    </div>
+    <!-- Blazor WebAssembly Script -->
     <script src="_framework/blazor.webassembly.js"></script>
   </body>
 </html>
